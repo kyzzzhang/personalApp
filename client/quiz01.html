@@ -1,0 +1,46 @@
+<template name="quiz1">
+  <body>
+  <div class="jumbotron">
+  <h1>Quiz 01a</h1>
+  <p>You have 30 minutes to complete this quiz</p>
+  </div>
+
+  <div>
+    <p><strong>Write the meteor template for this page, including this text and the header</strong></p>
+   <table class="table table-bordered">
+     <tbody>
+      <tr>
+        <td><strong>Name</strong></td>
+        <td><input type="text" cols="40"></td>
+      </tr>
+      <tr>
+        <td><strong>Gender</strong></td>
+        <td>
+          <select>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Bio</strong></td>
+        <td><div>
+          <textarea rows="3" cols="20" placeholder="Enter bio here!"></textarea>
+        </div></td>
+      </tr>
+    </tbody>
+  </table>
+  <label>
+  <div class="checkbox">
+      <input type="checkbox"> I agree to allow my bio to be published
+  </div>
+  </label>
+  <hr>
+  <button type="submit" class="btn button btn-primary btn-lg">Submit your bio!</button>
+  </div>
+  <hr>
+  </body>
+  <footer>
+    <p>Created by <strong>Kaiyi Zhang</strong></p>
+  </footer>
+</template>

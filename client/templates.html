@@ -1,0 +1,56 @@
+<head>
+  <title>CoolCute APP 2017</title>
+</head>
+
+<template name="main">
+  <h1>Main page</h1>
+  {{> addperson}}
+  <hr>
+  {{> showpeople}}<!-- input one template inside another-->
+</template>
+
+<template name="about">
+  <h1>Kaiyi's cutest app</h1>
+</template>
+
+<template name="info">
+  <h1>This is the info page</h1>
+  <h3>However I have no idea what this app is doing lol</h3>
+</template>
+
+<template name="addperson">
+  Name:<input type="text" id="name"><br>
+  Birthyear:<input type="text" id="birthyear"><br>
+  <button id="addperson" class="btn btn-primary">
+    Add to Collection
+  </button>
+</template>
+
+<template name="layout">
+  <div class="container">
+  <h1>CuteCuteCute2017</h1>
+  {{> yield}}
+  <hr>
+  <a href="/">home</a>
+  <a href="abc/def/about">about</a>
+  <a href="/info">info</a>
+  {{> loginButtons}}
+  </div>
+</template>
+
+<template name="showpeople">
+  {{#if currentUser}}
+  <ul>
+  {{#each p in peoplelist}}
+    <li>{{>personrow person=p}}</li>
+  {{/each}}
+</ul>
+{{else}}
+<h1>You must log in to see the info</h1>
+{{/if}}
+</template>
+
+<template name="personrow">
+  {{person.name}}--{{person.birthyear}}
+  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+</template>
